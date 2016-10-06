@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/accent_material_dark"
+    android:focusable="false"
+    android:focusableInTouchMode="true">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIGN UP"
+        android:id="@+id/btn_signup"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="37dp"
+        android:focusable="false"
+        android:focusableInTouchMode="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="CREATE USER ACCOUNT"
+        android:textSize="30sp"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fname"
+        android:layout_marginTop="67dp"
+        android:singleLine="true"
+        android:hint="First Name"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lname"
+        android:singleLine="true"
+        android:hint="Last Name"
+        android:layout_below="@+id/fname" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/uname"
+        android:singleLine="true"
+        android:hint="Username"
+        android:layout_below="@+id/lname" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:hint="E-Mail Address"
+        android:layout_below="@+id/uname"
+        android:singleLine="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pword"
+        android:layout_below="@+id/email"
+        android:hint="Password"
+        android:singleLine="true"
+        android:password="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cpword"
+        android:layout_below="@+id/pword"
+        android:hint="Confirm Password"
+        android:singleLine="true"
+        android:password="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHOW"
+        android:id="@+id/btn1"
+        android:layout_below="@+id/email"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHOW"
+        android:id="@+id/btn2"
+        android:layout_alignBottom="@+id/cpword"
+        android:layout_alignLeft="@+id/btn1"
+        android:layout_alignStart="@+id/btn1" />
+
+</RelativeLayout>

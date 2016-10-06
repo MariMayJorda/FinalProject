@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/accent_material_dark">
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailadd"
+        android:drawableLeft="@drawable/profile"
+        android:textSize="15sp"
+        android:hint="@string/email_address"
+        android:singleLine="true"
+        android:layout_above="@+id/pw"
+        android:layout_marginBottom="43dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/password"
+        android:ems="10"
+        android:id="@+id/pw"
+        android:textSize="15sp"
+        android:hint="@string/password"
+        android:singleLine="true"
+        android:layout_centerVertical="true"
+        android:password="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in"
+        android:id="@+id/btn_login"
+        android:textSize="20sp"
+        android:layout_above="@+id/signup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="55dp"
+        android:focusableInTouchMode="true"
+        android:elegantTextHeight="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="CREATE ACCOUNT"
+        android:id="@+id/signup"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHOW"
+        android:id="@+id/show"
+        android:layout_below="@+id/emailadd"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
