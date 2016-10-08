@@ -16,7 +16,6 @@ public class MainActivity extends Activity {
     float x1, y1 , x2, y2, a, b;
     String msg1 = "", msg2="";
     ImageView image;
-    Button backbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,17 +28,6 @@ public class MainActivity extends Activity {
         final EditText quadrant = (EditText) findViewById(R.id.editText4);
         final EditText motion= (EditText) findViewById(R.id.editText5);
         image = (ImageView) findViewById(R.id.imageView);
-        backbtn= (Button) findViewById(R.id.back);
-
-        backbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i;
-                i = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(i);
-            }
-
-        });
 
 
         image.setOnTouchListener(new View.OnTouchListener() {
@@ -110,6 +98,12 @@ public class MainActivity extends Activity {
                 return true;
             }
         });
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        finish();
     }
 }
 

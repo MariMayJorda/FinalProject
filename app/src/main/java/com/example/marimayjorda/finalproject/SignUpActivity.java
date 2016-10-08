@@ -128,6 +128,7 @@ public class SignUpActivity extends Activity{
                 }
             }
         });
+        
     }
 
     private boolean ValidEmail(String email) {
@@ -158,6 +159,12 @@ public class SignUpActivity extends Activity{
         Pattern pattern = Pattern.compile(LNAME_PATTERN);
         Matcher matcher = pattern.matcher(lname);
         return matcher.matches();
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        finish();
     }
 
 }

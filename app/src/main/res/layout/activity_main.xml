@@ -96,11 +96,4 @@
         android:layout_below="@+id/textView6"
         android:singleLine="true" />
 
-    <Button
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/back"
-        android:background="@drawable/abc_ic_ab_back_material"
-        android:layout_alignParentTop="true" />
-
 </RelativeLayout>
