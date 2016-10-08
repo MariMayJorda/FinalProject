@@ -5,11 +5,11 @@
     android:background="@color/accent_material_dark">
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:layout_gravity="center_horizontal"
-        android:background="@android:drawable/sym_def_app_icon"
+        android:background="@drawable/the_flash"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 

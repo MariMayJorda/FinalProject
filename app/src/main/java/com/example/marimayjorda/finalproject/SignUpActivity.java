@@ -95,9 +95,18 @@ public class SignUpActivity extends Activity{
             public void onClick(View v) {
                 String email = emailadd.getText().toString();
                 String uname = username.getText().toString();
+                String Lname= lname.getText().toString();
+                String Fname= fname.getText().toString();
+                String pass= pw.getText().toString();
+                String cpass= cp.getText().toString();
+
                 String savePw = LoginDataBaseAdapter.getEmail(email);
                 String savePw1 = LoginDataBaseAdapter.getUsernameforsignup(uname);
 
+                if(email.equals("")||uname.equals("")||Lname.equals("")||Fname.equals("")||pass.equals("")||cpass.equals("")){
+                    Toast.makeText(getApplicationContext(),"Please fill out all the fields", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 if(!ValidEmail(emailadd.getText().toString())) {
                     Toast.makeText(SignUpActivity.this,"Invalid Email",Toast.LENGTH_LONG).show();
@@ -110,6 +119,9 @@ public class SignUpActivity extends Activity{
                 }
                 else if(!ValidFname(fname.getText().toString())) {
                     Toast.makeText(SignUpActivity.this,"Invalid First Name",Toast.LENGTH_LONG).show();
+                }
+                else if(!ValidLname(lname.getText().toString())) {
+                    Toast.makeText(SignUpActivity.this,"Invalid Last Name",Toast.LENGTH_LONG).show();
                 }
                 else if(!ValidLname(lname.getText().toString())) {
                     Toast.makeText(SignUpActivity.this,"Invalid Last Name",Toast.LENGTH_LONG).show();
@@ -161,10 +173,6 @@ public class SignUpActivity extends Activity{
         return matcher.matches();
     }
 
-    @Override
-    protected void onPause(){
-        super.onPause();
-        finish();
-    }
+
 
 }
